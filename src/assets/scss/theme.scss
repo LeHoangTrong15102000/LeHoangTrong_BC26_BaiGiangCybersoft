@@ -1,0 +1,46 @@
+// variables
+$c1: #2675d8;
+$c2: #000000;
+$c2-200: rgba(0, 0, 0, 0.2);
+// $c2-500: #6d6d6d;
+// $c2-700: #2e2e2e;
+$c3: #ffffff;
+
+$text-xs: 12px;
+$text-sm: 14px;
+$text-base: 16px;
+$text-md: 20px;
+$text-lg: 24px;
+$text-xl: 30px;
+$text-2xl: 40px;
+$text-3xl: 60px;
+
+$text-light: 300;
+$text-regular: 400;
+$text-medium: 500;
+$text-bold: 700;
+$text-black: 900;
+
+// mixins: text, button, table, input...
+@mixin text($c: $c2, $fs: $text-base, $fw: $text-regular) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+
+@mixin button($bg, $c, $bd, $rd, $p, $fs: $text-sm, $fw: $text-regular) {
+  background-color: $bg;
+  color: $c;
+  border: $bd;
+  border-radius: $rd;
+  padding: $p;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// semantic versioning : major.minor.patch

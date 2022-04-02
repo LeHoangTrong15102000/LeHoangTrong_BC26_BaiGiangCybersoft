@@ -1,0 +1,68 @@
+@import "../assets/scss/theme.scss";
+
+.header {
+  box-shadow: 0px 3px 5px $c2-200;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    .logo {
+      text-decoration: none;
+      @include text($c1, $text-2xl, $text-bold);
+    }
+    .navbar {
+      a {
+        @include text();
+        margin-left: 20px;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $c1;
+          transition: all 0.4s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &:hover {
+          color: $c1;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    background-color: red;
+    .container {
+      .logo {
+        display: none;
+      }
+    }
+  }
+}
+
+// .container .logo{}
+
+// .container .navbar{}
+
+// .container .navbar a{}
+
+// .container .navbar a::after{}
+
+// .container .navbar a:hover::after{}
